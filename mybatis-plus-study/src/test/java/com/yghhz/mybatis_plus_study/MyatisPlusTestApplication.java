@@ -24,4 +24,22 @@ public class MyatisPlusTestApplication {
         List<User> userList = userMapper.selectList(null);
         userList.forEach(System.out::println);
     }
+
+    @Test
+    public void insertUser(){
+        User user = new User();
+        user.setName("test");
+        user.setAge(1);
+        user.setEmail("123456@qq.com");
+        userMapper.insert(user);
+    }
+    @Test
+    public void updateUser(){
+        User user = new User();
+        user.setName("test");
+        user.setAge(2);
+        user.setEmail("123456@qq.com");
+        user.setId(6l);
+        userMapper.updateById(user);
+    }
 }

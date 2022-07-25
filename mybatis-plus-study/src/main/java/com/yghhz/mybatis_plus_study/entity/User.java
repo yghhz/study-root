@@ -1,5 +1,6 @@
 package com.yghhz.mybatis_plus_study.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -19,12 +20,13 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-    @TableId(type = IdType.ID_WORKER)
+    @TableId(type = IdType.AUTO)
     private Long id;
     private String name;
     private Integer age;
     private String email;
-    @TableField
+    @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtUpdate;
 }
