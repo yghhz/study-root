@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2022/7/23 20:07
  */
 @SpringBootApplication
-@MapperScan("com.yghhz.mybatis_plus_study.mapper")
 public class MybatisPlusApplication {
     public static void main(String[] args) {
         SpringApplication.run(MybatisPlusApplication.class,args);

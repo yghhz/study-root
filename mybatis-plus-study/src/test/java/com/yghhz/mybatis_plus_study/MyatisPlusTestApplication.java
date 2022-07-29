@@ -42,4 +42,15 @@ public class MyatisPlusTestApplication {
         user.setId(6l);
         userMapper.updateById(user);
     }
+    @Test
+    public void testVersion(){
+        User user = userMapper.selectById(1);
+        Integer version = user.getVersion();
+        user.setName("1111");
+        User user1 = userMapper.selectById(1);
+        user1.setName("2222");
+        Integer version1 = user1.getVersion();
+        userMapper.updateById(user1);
+        userMapper.updateById(user);
+    }
 }
