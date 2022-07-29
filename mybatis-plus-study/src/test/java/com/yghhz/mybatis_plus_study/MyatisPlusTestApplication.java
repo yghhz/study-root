@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -52,5 +54,23 @@ public class MyatisPlusTestApplication {
         Integer version1 = user1.getVersion();
         userMapper.updateById(user1);
         userMapper.updateById(user);
+    }
+    @Test
+    public void selectOne(){
+        User user = userMapper.selectById(1);
+        System.out.println(user);
+    }
+    @Test
+    public void selectList(){
+        List<User> users = userMapper.selectBatchIds(Arrays.asList(1,2,3));
+
+        users.forEach(System.out::println);
+    }
+    @Test
+    public void selectOneMap(){
+        HashMap<String,Object> map = new HashMap();
+        map.put("name","2222");
+        List<User> users = userMapper.selectByMap(map);
+        users.forEach(System.out::println);
     }
 }
