@@ -28,4 +28,6 @@ public class User {
     private Date gmtUpdate;
     @Version
     private Integer version;
+    @TableLogic
+    private Integer isDelete;
 }

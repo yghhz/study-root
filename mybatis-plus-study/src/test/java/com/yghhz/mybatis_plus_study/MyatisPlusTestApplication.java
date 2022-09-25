@@ -1,5 +1,7 @@
 package com.yghhz.mybatis_plus_study;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yghhz.mybatis_plus_study.entity.User;
 import com.yghhz.mybatis_plus_study.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
@@ -73,4 +75,16 @@ public class MyatisPlusTestApplication {
         List<User> users = userMapper.selectByMap(map);
         users.forEach(System.out::println);
     }
+    @Test
+    public void testPage(){
+        Page<User> page = new Page<>(1,5);
+        IPage<User> userIPage = userMapper.selectPage(page, null);
+        userIPage.getRecords().forEach(System.out::println);
+    }
+    @Test
+    public void testDelete(){
+        int delete = userMapper.deleteById(6l);
+    }
+
+
 }
