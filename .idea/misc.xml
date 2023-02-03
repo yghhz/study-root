@@ -16,6 +16,8 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/RestTemplateStudy/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server-study/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-parent/pom.xml" />
       </set>
     </option>
   </component>

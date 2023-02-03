@@ -10,6 +10,8 @@
     <modules>
         <module>mybatis-plus-study</module>
         <module>resttemplate-study</module>
+        <module>swagger-study</module>
+        <module>io-stream-study</module>
     </modules>
     <packaging>pom</packaging>
 

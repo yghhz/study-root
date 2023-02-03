@@ -1,0 +1,17 @@
+server:
+  port: 8082
+
+resttemplate:
+  study:
+    getForObjectNoArgs:
+      url: http://localhost:8080/get/getForObjectNoArgs
+    getForObject:
+      url: http://localhost:8080/get/getForObject
+    getForObjectMap:
+      url: http://localhost:8080/get/getForObjectMap
+    postForObjectJson:
+      url: http://localhost:8080/post/postForObjectJson
+    postForObjectForm:
+      url: http://localhost:8080/post/postForObjectForm
+    postForObjectFormFile:
+      url: http://localhost:8080/post/postForObjectFormFile
